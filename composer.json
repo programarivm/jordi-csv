@@ -1,0 +1,23 @@
+{
+  "name": "programarivm/jordi-csv",
+  "description": "CSV tool. For now, it only dumps the content of a CSV file into a MySQL table.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jordi Bassagañas",
+      "email": "info@programarivm.com",
+      "homepage": "https://programarivm.com"
+    }
+  ],
+  "require-dev": {
+    "codeception/codeception": "~2.0"
+  },
+  "require": {
+    "icanboogie/inflector": "~1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "JordiCSV\\": "src/"
+    }
+  }
+}
