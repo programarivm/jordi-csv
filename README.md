@@ -27,7 +27,7 @@ The following MySQL script will help you create the `jordi_csv_prod` database as
 
 #### 2.1. Parameters
 
-**file name**&nbsp;The file name with the .csv extension. The file needs to be located in the `files` folder.
+**file name**&nbsp;The CSV file name with the .csv extension. The file needs to be located in the `files` folder.
 
 **table name**&nbsp;This is the name of the table where the data will be dumped. The program automatically creates the table for you.
 
@@ -46,15 +46,15 @@ The program will generate this output:
     P0017, CPU, Processing power,  ideal for multimedia, 4, 4.22
     Open the file with your favorite editor, fix the errors and try again.
 
-Certainly, there's one line which is not valid:
+Cool! The file has been successfully dumped into the database, but there's one line which is not valid:
 
     P0017,CPU,Processing power, ideal for multimedia,4,4.22,
 
-Note how the last comma (,) needs to be removed at the end of the line:
+Certainly, note how the last comma (,) needs to be removed at the end of the line:
 
     P0017,CPU,Processing power, ideal for multimedia,4,4.22
 
-The `foobar` table will be automatically created, and it will look like this:
+Anyway, the `foobar` table will be automatically created and it will look like this:
 
     mysql> select * from foobar;
     +--------------+---------------+--------------------------------------+-------+-------------+--------------+
@@ -91,12 +91,12 @@ The `foobar` table will be automatically created, and it will look like this:
     +--------------+---------------+--------------------------------------+-------+-------------+--------------+
     28 rows in set (0.00 sec)
 
-In order to fix the CSV errors, you can create a new file named `\files\stock-fixed-errors.csv` with the following content:
+In order to fix the CSV errors, create a new file named `\files\stock-fixed-errors.csv` with the following content:
 
     Product Code,Product Name,Product Description,Stock,Cost in GBP,Discontinued
     P0017,CPU,Processing power, ideal for multimedia,4,4.22
 
-Then, append the fixed CSV rows to the `foobar` table.:
+Then, append the fixed CSV rows to the `foobar` table:
 
     php example-01.php stock-fixed-errors.csv foobar a
 
