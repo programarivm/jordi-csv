@@ -14,7 +14,7 @@ define('DB_USER', 'jordi_csv');
 define('DB_PASSWORD', 'fCVdsH_v5BpExPa43_fda');
 ```
 
-The following MySQL script will help you create the `jordi_csv_prod` database as well as the user required for the program to run:
+A MySQL database needs to be created. The following MySQL script will help you create in a snap the `jordi_csv_prod` database as well as the user required for the program to run:
 
     CREATE DATABASE jordi_csv_prod;
 
@@ -35,7 +35,7 @@ The following MySQL script will help you create the `jordi_csv_prod` database as
 
 #### 2.2. Example
 
-Just place your CSV file into the `files` folder and run the example as shown below:
+Put your CSV file into the `files` folder and run the example as shown below:
 
     php example-01.php stock.csv foobar w
 
@@ -54,7 +54,7 @@ Certainly, note how the last comma (,) needs to be removed at the end of the lin
 
     P0017,CPU,Processing power, ideal for multimedia,4,4.22
 
-Anyway, the `foobar` table will be automatically created and it will look like this:
+Anyway, the `foobar` table is automatically created and it looks like this:
 
     mysql> select * from foobar;
     +--------------+---------------+--------------------------------------+-------+-------------+--------------+
@@ -100,11 +100,11 @@ Then, append the fixed CSV rows to the `foobar` table by using the `a` mode:
 
     php example-01.php stock-fixed-errors.csv foobar a
 
-Now the program will respond like this:
+This time the program will respond like this:
 
     OK. The file has been successfully dumped into the database!
 
-And this is how the `foobar` table will look like:
+And this is how the `foobar` table will look like after the fix:
 
     mysql> select * from foobar;
     +--------------+---------------+--------------------------------------+-----------------------+-------------+--------------+
