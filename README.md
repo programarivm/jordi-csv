@@ -27,9 +27,9 @@ The following MySQL script will help you create the `jordi_csv_prod` database as
 
 #### 2.1. Parameters
 
-**file name**&nbsp;The CSV file name with the .csv extension. The file needs to be located in the `files` folder.
+**file name**&nbsp;The CSV file name with the .csv extension, for example `stock.csv`. The file needs to be located in the `files` folder.
 
-**table name**&nbsp;This is the name of the table where the data will be dumped. The program automatically creates the table for you.
+**table name**&nbsp;This is the name of the table where the data will be dumped, for example `foobar`. The program will automatically create the table for you.
 
 **mode** `a` is for appending CSV rows to an existing table, and `w` is for writing CSV rows.
 
