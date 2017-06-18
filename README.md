@@ -46,7 +46,7 @@ The program will generate this output:
     P0017, CPU, Processing power,  ideal for multimedia, 4, 4.22
     Open the file with your favorite editor, fix the errors and try again.
 
-Cool! The file has been successfully dumped into the database, but there's one line which is not valid:
+The file has been successfully dumped into the database, however there's one line which is not valid -- this is a common thing when processing CSV files.
 
     P0017,CPU,Processing power, ideal for multimedia,4,4.22,
 
@@ -96,7 +96,7 @@ In order to fix the CSV errors, create a new file named `\files\stock-fixed-erro
     Product Code,Product Name,Product Description,Stock,Cost in GBP,Discontinued
     P0017,CPU,Processing power, ideal for multimedia,4,4.22
 
-Then, append the fixed CSV rows to the `foobar` table:
+Then, append the fixed CSV rows to the `foobar` table by using the `a` mode:
 
     php example-01.php stock-fixed-errors.csv foobar a
 
